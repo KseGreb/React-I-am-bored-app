@@ -1,7 +1,8 @@
 
 import { useEffect, useState } from 'react';
 import './App.css';
-//import Activity from './Activity';
+import Activity from './Activity';
+import video from "./video.mp4"
 
 function App() {
 
@@ -18,12 +19,6 @@ function App() {
     FindAdvice()
   },[showAdvice])
 
-//  const getAdvice = () => {
-//   if (advice === ""){
-//     setAdvice()
-//   }
-//   //   setAdvice()
-// }
 
 function handleSubmit(e) {
   e.preventDefault();
@@ -31,22 +26,27 @@ function handleSubmit(e) {
 }
 
   return (
-    <div className="App">
-    
-    <div>
-      <h1>Are you bored?</h1>
-      {/* <Activity isUsingProps = {advice}/> */}
-      <p>Press the button and get an idea what to do!</p>
+                                                                                                                                                                                                                                                                                                                    
+    <div className='main'>
+            
+      <div className='container'>
+        <h1>Are you bored?</h1>
+        {/* <Activity isUsingProps = {advice}/> */}
+        <p>Press the button and get an idea of what to do!</p>
+        
+        <form onSubmit={handleSubmit}>
+          <button>WHAT SHALL I DO TODAY?</button>
+          <h2>{showAdvice}</h2>
+        </form>
+      </div>
+
+      <video src={video} autoPlay loop muted  />
+
+
       
-      <form onSubmit={handleSubmit}>
-        <button>WHAT SHALL I DO TODAY?</button>
-        <h2>{showAdvice}</h2>
-      </form>
     </div>
-                                                                                                                                                                                                                                                                                                                       
 
-
-    </div>
+    // </div>
   );
 }
 
