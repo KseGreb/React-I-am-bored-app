@@ -2,12 +2,14 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import Activity from './Activity';
-import video from "./video.mp4"
+import VideoBg from './mainScreen';
+
 
 function App() {
 
   const [advice, setAdvice] = useState("");
   const [showAdvice, setShowAdvice] = useState("")
+  
 
   useEffect(()=>{
     const FindAdvice = async () =>{
@@ -26,27 +28,13 @@ function handleSubmit(e) {
 }
 
   return (
-                                                                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                                   
     <div className='main'>
-            
-      <div className='container'>
-        <h1>Are you bored?</h1>
-        {/* <Activity isUsingProps = {advice}/> */}
-        <p>Press the button and get an idea of what to do!</p>
-        
-        <form onSubmit={handleSubmit}>
-          <button>WHAT SHALL I DO TODAY?</button>
-          <h2>{showAdvice}</h2>
-        </form>
-      </div>
-
-      <video src={video} autoPlay loop muted  />
-
-
+      
+      <Activity oneProp={showAdvice} twoProp={handleSubmit}/>
+      <VideoBg/>
       
     </div>
-
-    // </div>
   );
 }
 
