@@ -30,7 +30,7 @@ video {
   background-color: rgba(0, 0, 0, 0.6);
   
 }
-form{
+.showResult{
   padding: 20px;
   height: 300px;
   display: flex;

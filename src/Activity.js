@@ -5,6 +5,7 @@ function Activity(){
   const [showAdvice, setShowAdvice] = useState("")
   
 
+
   useEffect(()=>{
     const FindAdvice = async () =>{
       const response = await fetch (`http://www.boredapi.com/api/activity/`);
@@ -27,10 +28,10 @@ function handleSubmit(e) {
         <h1>Are you bored?</h1>
         <p>Press the button and get an idea of what to do!</p>
         
-        <form onSubmit={handleSubmit}>
-          <button>WHAT SHALL I DO TODAY?</button>
+        <div className='showResult'>
+          <button on onClick={handleSubmit}>WHAT SHALL I DO TODAY?</button>
           <h2>{showAdvice}</h2>
-        </form>
+        </div>
       </div>
 
     </div>
