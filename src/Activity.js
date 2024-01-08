@@ -26,7 +26,7 @@ function Activity(){
         <p>Press the button and get an idea of what to do!</p>
         
         <div className='showResult'>
-          <button on onClick={()=>FindAdvice()}>WHAT SHALL I DO TODAY?</button>
+          <button onClick={()=>FindAdvice()}>WHAT SHALL I DO TODAY?</button>
           <h2>{advice}</h2>
         </div>
       </div>
